@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>GROCERY WEBSITE</title>
+</head>
+<body bgcolor="#00ff00">
+  
+<script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+<!-- g -->
+ 
+
+<nav class="bg-black fixed w-full z-20 top-0 start-0 border-b border-gray-700">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+  <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <img src="./icon.jpeg" class="h-7" alt="Flowbite Logo" />
+      <span class="self-center text-xl text-white font-semibold whitespace-nowrap">Grocery</span>
+  </a>
+  <div class="flex items-center md:order-2">
+    <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search" aria-expanded="false" class="flex items-center justify-center md:hidden text-body hover:text-heading bg-transparent box-border border border-transparent hover:bg-neutral-secondary-medium focus:ring-2 focus:ring-neutral-tertiary font-medium leading-5 rounded-base text-sm w-10 h-10 focus:outline-none">
+      <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"/></svg>
+      <span class="sr-only text-white">Search</span>
+    </button>
+    <label for="input-group-1" class="sr-only">Your Email</label>
+    <div class="relative hidden md:block">
+      <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+        <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"/></svg>
+      </div>
+      <input type="text" id="input-group-1" class="block w-full ps-9 pe-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-white text-sm rounded-base focus:ring-brand focus:border-brand px-2.5 py-2 shadow-xs placeholder:text-body" placeholder="Search">
+    </div>
+    <button data-collapse-toggle="navbar-search" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary" aria-controls="navbar-search" aria-expanded="false">
+        <span class="sr-only text-white">Open main menu</span>
+        <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
+    </button>
+  </div>
+    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
+      <div class="relative mt-3 md:hidden">
+        <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+          <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"/></svg>
+        </div>
+        <input type="text" id="input-group-1" class="block w-full ps-9 pe-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-white text-sm rounded-base focus:ring-brand focus:border-brand px-2.5 py-2 shadow-xs placeholder:text-body" placeholder="Search">
+      </div>
+      <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
+        <li>
+          <a href="#" class="block py-2 px-3 text-white bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0" aria-current="page">Home</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 text-white rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Products</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 text-white rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Deals</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- s1 -->
+ <section class="text-gray-600 body-font custom">
+  <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+    <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+      <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Your One-Stop Shop
+        <br class="hidden lg:inline-block">for <span class="custom">Quality Groceries</span>
+      </h1>
+      <p class="mb-8 leading-relaxed can">Save up to 50% off on your first order.</p>
+      <div class="flex justify-center">
+        <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Buy Now</button>
+      </div>
+    </div>
+    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+      <img class="object-cover object-center rounded can" alt="hero" src="./basket.jpeg">
+    </div>
+  </div>
+</section>
+<!-- sec -->
+  <section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-20">
+      <h2 class="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1">Let's Start Shopping</h2>
+      <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900">GROCERY ESSENTIALS</h1>
+    </div>
+    <div class="flex flex-wrap -m-4">
+      <div class="lg:w-1/3 sm:w-1/2 p-4">
+        <div class="flex relative">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="veg.jpeg">
+          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1"></h2>
+            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Vegetable</h1>
+             <p class="leading-relaxed">Our vegetables are fresh, healthy, and carefully selected every day to bring you the best quality.We ensure natural taste, rich nutrition, and farm-fresh freshness so you can cook delicious and healthy meals for your family. </p> 
+          </div>
+        </div>
+      </div>
+      <div class="lg:w-1/3 sm:w-1/2 p-4">
+        <div class="flex relative">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="./dairy.jpeg">
+          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1"></h2>
+            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Dairy Products</h1>
+            <p class="leading-relaxed">Our dairy products are fresh, pure, and rich in nutrition. From milk to yogurt and cheese, we ensure quality and freshness so you can enjoy healthy and wholesome dairy every day.High-quality dairy products, fresh and nutritious.</p>
+          </div>
+        </div>
+      </div>
+      <div class="lg:w-1/3 sm:w-1/2 p-4">
+        <div class="flex relative">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="./fruit bask.jpeg">
+          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1"></h2>
+            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Fruits</h1>
+            <p class="leading-relaxed">Our fruits are fresh, juicy, and full of natural goodness. Carefully selected to ensure the best quality, they bring freshness, flavor, and essential nutrients to your daily diet.Fresh aur juicy fruits rozana sehat ke liye.
+Natural taste aur behtareen quality ke sath.</p>
+          </div>
+        </div>
+      </div>
+      <div class="lg:w-1/3 sm:w-1/2 p-4">
+        <div class="flex relative">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="./frozen.jpeg">
+          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1"></h2>
+            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Frozen Items</h1>
+            <p class="leading-relaxed">Freshness that lasts longer. Our frozen items are quick-frozen to preserve taste, texture, and nutrition, making them a perfect choice for fast, easy, and delicious meals.</p>
+          </div>
+        </div>
+      </div>
+      <div class="lg:w-1/3 sm:w-1/2 p-4">
+        <div class="flex relative">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="poultry.jpeg">
+          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1"></h2>
+            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Meat & Poultry</h1>
+            <p class="leading-relaxed">Fresh, high-quality meat and poultry sourced from trusted suppliers.
+Hygienically processed for great taste, safety, and nutrition.</p>
+          </div>
+        </div>
+      </div>
+      <div class="lg:w-1/3 sm:w-1/2 p-4">
+        <div class="flex relative">
+          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="kitchen.jpeg">
+          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1"></h2>
+            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Daily Essentials</h1>
+            <p class="leading-relaxed">Our daily essentials include high-quality flour, rice, sugar, and other basic kitchen items.
+Each product is carefully selected to ensure purity and freshness.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- s2-->
+
+ <section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-20">
+      <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900">Vegetables</h1>
+    </div>
+    <div class="flex flex-wrap -m-4">
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="./capsicum.jpeg">
+        </a>
+        <div class="mt-4">
+          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1"></h3>
+          <h2 class="text-gray-900 title-font text-lg font-medium">Green Capsicum</h2>
+          <p class="mt-1">$7.00</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="kale.jpeg">
+        </a>
+        <div class="mt-4">
+          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1"></h3>
+          <h2 class="text-gray-900 title-font text-lg font-medium">Fresh Green Kale Leaves</h2>
+          <p class="mt-1">$9.84</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="brocoli.jpeg">
+        </a>
+        <div class="mt-4">
+          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1"></h3>
+          <h2 class="text-gray-900 title-font text-lg font-medium">Broccoli</h2>
+          <p class="mt-1">$2.50</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="images.jpeg">
+        </a>
+        <div class="mt-4">
+          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1"></h3>
+          <h2 class="text-gray-900 title-font text-lg font-medium">Grean Beans</h2>
+          <p class="mt-1">$6.40</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="bang.jpeg">
+        </a>
+        <div class="mt-4">
+          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1"></h3>
+          <h2 class="text-gray-900 title-font text-lg font-medium">Egg Plant</h2>
+          <p class="mt-1">$11.00</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="carrot.jpeg">
+        </a>
+        <div class="mt-4">
+          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1"></h3>
+          <h2 class="text-gray-900 title-font text-lg font-medium">Carrot</h2>
+          <p class="mt-1">$3.15</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="cabage.jpeg">
+        </a>
+        <div class="mt-4">
+          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1"></h3>
+          <h2 class="text-gray-900 title-font text-lg font-medium">Cabbage</h2>
+          <p class="mt-1">$3.00</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="p.jpeg">
+        </a>
+        <div class="mt-4">
+          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1"></h3>
+          <h2 class="text-gray-900 title-font text-lg font-medium">green leaf lettuce</h2>
+          <p class="mt-1">$2.40</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- s3 -->
+ <section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-20">
+      <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900"> Dairy Products </h1>
+    </div>
+    <div class="flex flex-wrap -m-4">
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="milk.jpeg">
+        </a>
+        <div class="mt-4">
+          <h2 class="text-gray-900 title-font text-lg font-medium">Milk</h2>
+          <p class="mt-1">$6.00</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="egg.jpeg">
+        </a>
+        <div class="mt-4">
+          <h2 class="text-gray-900 title-font text-lg font-medium">Eggs</h2>
+          <p class="mt-1">$5.15</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="condensed.jpeg">
+        </a>
+        <div class="mt-4">
+          <h2 class="text-gray-900 title-font text-lg font-medium">Condensed Milk</h2>
+          <p class="mt-1">$12.00</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="./butter.jpeg">
+        </a>
+        <div class="mt-4">
+          <h2 class="text-gray-900 title-font text-lg font-medium">Butter</h2>
+          <p class="mt-1">$8.40</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="./ricotta.jpeg">
+        </a>
+        <div class="mt-4">
+          <h2 class="text-gray-900 title-font text-lg font-medium">Ricotta</h2>
+          <p class="mt-1">$16.00</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="./sliced cheese.jpeg">
+        </a>
+        <div class="mt-4">
+          <h2 class="text-gray-900 title-font text-lg font-medium">Sliced Cheese</h2>
+          <p class="mt-1">$11.15</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="./yogurt.jpeg">
+        </a>
+        <div class="mt-4">
+          <h2 class="text-gray-900 title-font text-lg font-medium">Yogurt</h2>
+          <p class="mt-1">$5.00</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="./panner tofu.jpeg">
+        </a>
+        <div class="mt-4">
+          <h2 class="text-gray-900 title-font text-lg font-medium">Paneer</h2>
+          <p class="mt-1">$9.40</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- s4 -->
+ <section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-20">
+      <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900">Fruits</h1>
+    </div>
+    <div class="flex flex-wrap -m-4">
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="./straw.jpeg">
+        </a>
+        <div class="mt-4">
+          <h2 class="text-gray-900 title-font text-lg font-medium">Strawberry</h2>
+          <p class="mt-1">$7.00</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="./orange.jpeg">
+        </a>
+        <div class="mt-4">
+          <h2 class="text-gray-900 title-font text-lg font-medium">Orange</h2>
+          <p class="mt-1">$5.15</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="anar.jpeg">
+        </a>
+        <div class="mt-4">
+          <h2 class="text-gray-900 title-font text-lg font-medium">Pomegranete</h2>
+          <p class="mt-1">$7.00</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="./grapes.jpeg">
+        </a>
+        <div class="mt-4">
+          <h2 class="text-gray-900 title-font text-lg font-medium">Grapes</h2>
+          <p class="mt-1">$9.40</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="./pineapple.jpeg">
+        </a>
+        <div class="mt-4">
+          <h2 class="text-gray-900 title-font text-lg font-medium">Pineapple</h2>
+          <p class="mt-1">$10.00</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="banana.jpeg">
+        </a>
+        <div class="mt-4">
+          <h2 class="text-gray-900 title-font text-lg font-medium">Banana</h2>
+          <p class="mt-1">$3.15</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="kiwi.jpeg">
+        </a>
+        <div class="mt-4">
+          <h2 class="text-gray-900 title-font text-lg font-medium">Kiwi</h2>
+          <p class="mt-1">$12.00</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="cherry.jpeg">
+        </a>
+        <div class="mt-4">
+          <h2 class="text-gray-900 title-font text-lg font-medium">Cherry</h2>
+          <p class="mt-1">$18.40</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- s4 -->
+<section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-20">
+      <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900">Frozen Items</h1>
+    </div>
+    <div class="flex flex-wrap -m-4">
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block custom" src="tender.jpeg">
+        </a>
+        <div class="mt-4">
+          <h2 class="text-gray-900 title-font text-lg font-medium">Tender Pops</h2>
+          <p class="mt-1">$9.00</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block custom" src="chapli.jpeg">
+        </a>
+        <div class="mt-4">
+          <h2 class="text-gray-900 title-font text-lg font-medium">Chapli Kabab</h2>
+          <p class="mt-1">$8.15</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block custom" src="burger.jpeg">
+        </a>
+        <div class="mt-4">
+          <h2 class="text-gray-900 title-font text-lg font-medium">Burger Patties</h2>
+          <p class="mt-1">$12.00</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block custom" src="nuggest.jpeg">
+        </a>
+        <div class="mt-4">
+          <h2 class="text-gray-900 title-font text-lg font-medium">Nuggets</h2>
+          <p class="mt-1">$7.40</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block custom" src="kofta kabab.jpeg">
+        </a>
+        <div class="mt-4">
+          <h2 class="text-gray-900 title-font text-lg font-medium">Kofta Kabab</h2>
+          <p class="mt-1">$8.00</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block custom" src="spring.jpeg">
+        </a>
+        <div class="mt-4">
+          <h2 class="text-gray-900 title-font text-lg font-medium">Spring Roll</h2>
+          <p class="mt-1">$9.15</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block custom" src="samosa.jpeg">
+        </a>
+        <div class="mt-4">
+          <h2 class="text-gray-900 title-font text-lg font-medium">Samosa</h2>    
+            <p class="mt-1">$7.00</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block custom" src="seekh.jpeg">
+        </a>
+        <div class="mt-4">
+          <h2 class="text-gray-900 title-font text-lg font-medium">Seekh Kabab</h2>
+          <p class="mt-1">$10.40</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- s5 -->
+ <section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-20">
+      <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900">Meat & Poultry</h1>
+    </div>
+    <div class="flex flex-wrap -m-4">
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="chicken.jpeg">
+        </a>
+        <div class="mt-4">
+          <h2 class="text-gray-900 title-font text-lg font-medium">Chicken</h2>
+          <p class="mt-1">$8.00</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="2prawn.jpeg">
+        </a>
+        <div class="mt-4">
+          <h2 class="text-gray-900 title-font text-lg font-medium">Prawns</h2>
+          <p class="mt-1">$15.15</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="salmon.jpeg">
+        </a>
+        <div class="mt-4">
+          <h2 class="text-gray-900 title-font text-lg font-medium">Salmon</h2>
+          <p class="mt-1">$12.00</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="./lamb.jpeg">
+        </a>
+        <div class="mt-4">
+          <h2 class="text-gray-900 title-font text-lg font-medium">Lamb</h2>
+          <p class="mt-1">$18.40</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="./ribs.jpeg">
+        </a>
+        <div class="mt-4">
+          <h2 class="text-gray-900 title-font text-lg font-medium">Ribs</h2>
+          <p class="mt-1">$16.00</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="meat.jpeg">
+        </a>
+        <div class="mt-4">
+          <h2 class="text-gray-900 title-font text-lg font-medium">Beef</h2>
+          <p class="mt-1">$17.15</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="fishes.jpeg">
+        </a>
+        <div class="mt-4">
+          <h2 class="text-gray-900 title-font text-lg font-medium">Fish</h2>
+          <p class="mt-1">$12.00</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="mut.jpeg">
+        </a>
+        <div class="mt-4">
+          <h2 class="text-gray-900 title-font text-lg font-medium">Mutton</h2>
+          <p class="mt-1">$20.40</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- s6 -->
+ <section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-20">
+      <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900">Daily Essentials</h1>
+    </div>
+    <div class="flex flex-wrap -m-4">
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="ri.jpeg">
+        </a>
+        <div class="mt-4">
+          <h2 class="text-gray-900 title-font text-lg font-medium">Flour</h2>
+          <p class="mt-1">$8.00</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="man.jpeg">
+        </a>
+        <div class="mt-4">
+          <h2 class="text-gray-900 title-font text-lg font-medium">Pickle</h2>
+          <p class="mt-1">$7.15</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="rice.jpeg">
+        </a>
+        <div class="mt-4">
+          <h2 class="text-gray-900 title-font text-lg font-medium">Rice</h2>
+          <p class="mt-1">$9.00</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="ol.jpeg">
+        </a>
+        <div class="mt-4">
+          <h2 class="text-gray-900 title-font text-lg font-medium">Olive Oil</h2>
+          <p class="mt-1">$9.40</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="lip.jpeg">
+        </a>
+        <div class="mt-4">
+          <h2 class="text-gray-900 title-font text-lg font-medium">Libton Yellow Tea</h2>
+          <p class="mt-1">$6.00</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="nes.jpeg">
+        </a>
+        <div class="mt-4">
+          <h2 class="text-gray-900 title-font text-lg font-medium">Coffee</h2>
+          <p class="mt-1">$10.15</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="./salt.jpeg">
+        </a>
+        <div class="mt-4">
+          <h2 class="text-gray-900 title-font text-lg font-medium">Salt</h2>
+          <p class="mt-1">$7.00</p>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="green.jpeg">
+        </a>
+        <div class="mt-4">
+          <h2 class="text-gray-900 title-font text-lg font-medium">Green Tea</h2>
+          <p class="mt-1">$5.40</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- foot -->
+ <footer class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+    <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+              <img src="./cart.jpeg" class="h-7" alt="Flowbite Logo" />
+        <span class="ml-3 text-xl">GROCERY</span>
+      </a>
+      <p class="mt-2 text-sm text-gray-500">We have good and fresh items.</p>
+    </div>
+    <div class="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first">
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Bread & Bakery</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Drinks</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Fresh Fish</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Fruits & Vegetables</a>
+          </li>
+        </nav>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">INFORMATION</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Best Sellers</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Contact Us</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">New Products</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Delivery Informations</a>
+          </li>
+        </nav>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">My Accounts</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Account</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">My Website</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Order Delivery</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Shipping</a>
+          </li>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="bg-gray-100">
+    <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+      <p class="text-gray-500 text-sm text-center sm:text-left">© 2026 Grocery —
+        <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">@knyttneve</a> 
+      </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+        <a class="text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg>
+        </a>
+      </span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
